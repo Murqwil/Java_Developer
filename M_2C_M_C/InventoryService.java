@@ -6,4 +6,5 @@ package M_2C_M_C;
 
 
 public class InventoryService {
+
 }
