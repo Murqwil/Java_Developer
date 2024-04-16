@@ -23,6 +23,7 @@ public class InventoryService {
             if (quantity < 3) {
                 System.out.println("Внимание! Заканчивается " + product + ". Текущий запас: " + quantity);
                 deliveryNewProduct(product,5);
+                System.out.println("Ваши запасы были пополнены: " + product + "Текущий запас: " + quantity);
             }
         }
     }
