@@ -12,10 +12,13 @@ public class Main {
         InventoryService.deliveryNewProduct("Молоко",10);
         InventoryService.deliveryNewProduct("Сахар",10);
         InventoryService.deliveryNewProduct("Карамельный топинг",10);
+        InventoryService.deliveryNewProduct("Шоколадный топинг",10);
         InventoryService.deliveryNewProduct("Клубничный топинг",10);
+        InventoryService.deliveryNewProduct("Лёд",10);
         Scanner visitorOrder = new Scanner(System.in);
         while (true) {
             System.out.print("Добрый день! Что желаете?");
+            //здесь же используем наш список. как шаблон по изготовлению,и после изготовления убираем позиции в HashMap.
             String answer = visitorOrder.nextLine();
             System.out.print("-- Что у вас есть в наличии?");
             System.out.print("-- Сколько стоит ... ?(позиция + цена)");
