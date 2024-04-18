@@ -4,9 +4,11 @@ import java.util.Scanner;
 import M_2C_M_C.InventoryService;
 
 import static M_2C_M_C.InventoryService.inventory;
+import M_2C_M_C.Visitor;
 
 public class Main {
     public static void main(String[] args) {
+        Visitor Alexey_Sugar = new Visitor(30.95);
         //предположим что у нас изначально есть какой то запас продуктов для изготовления кофе.
         InventoryService.deliveryNewProduct("Кофе Арабика",10);
         InventoryService.deliveryNewProduct("Молоко",10);

@@ -12,8 +12,6 @@ import static M_2C_M_C.InventoryService.inventory;
 
 */
 public class PreparationService {
-    //Нужен какой то список,который будет отвечать за заказ который сделал наш посетитель... С помощью этого списка
-    //мы можем воздествовать на наш HashMap... нам нужно что то промежуточное...
     public static void makeCoffeeFromOrder(Scanner visitorOrder) {
         String order = visitorOrder.nextLine();
 

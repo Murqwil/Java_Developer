@@ -6,7 +6,7 @@ import static M_2C_M_C.InventoryService.inventory;
 
 /*
 Модуль уведомлений (Notification Service): Отвечает за отправку уведомлений
-клиентам о статусе заказа, оплаты и доставки.
+клиентам о статусе заказа, оплаты и доставки. ++
 */
 public class NotificationService {
     public static void sendStatusOrder_Price(Scanner visitorOrder) {
