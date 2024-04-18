@@ -8,7 +8,7 @@ import static M_2C_M_C.InventoryService.inventory;
 
 /*
 Модуль приготовления (Preparation Service): Управляет процессом приготовления кофе, включая взаимодействие
-с инвентаризацией для списания ингредиентов.
+с инвентаризацией для списания ингредиентов ++
 
 */
 public class PreparationService {
