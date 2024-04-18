@@ -5,28 +5,38 @@ package M_2C_M_C;
 */
 
 import java.util.HashMap;
-import java.util.function.DoubleBinaryOperator;
-import M_2C_M_C.DeliveryNewProduct;
+import java.util.Map;
 
-import static M_2C_M_C.DeliveryNewProduct.deliveryNewProduct;
 
 public class InventoryService {
-    //коллекция для понимания,что есть на складе.
-    static HashMap<String, Double> inventory = new HashMap<>();
+    private Map<String, Double> inventory;
 
-    //Метод добавления в коллекцию новой продукции.
+    public InventoryService() {
+        this.inventory = new HashMap<>();
+    }
 
-    //Метод,что будет отслеживать кол-во продукции,в случае чего мы должны добавить больше
-    public static void goingEndSoon() {
+    public Map<String, Double> getInventory() {
+        return inventory;
+    }
+
+    public void deliveryNewProduct(String item, double quantity) {
+        if (inventory.containsKey(item)) {
+            double currentQuantity = inventory.get(item);
+            inventory.put(item, currentQuantity + quantity);
+        } else {
+            inventory.put(item, quantity);
+        }
+    }
+
+    public void goingEndSoon() {
         for (String product : inventory.keySet()) {
             double quantity = inventory.get(product);
             if (quantity < 3) {
                 System.out.println("Внимание! Заканчивается " + product + ". Текущий запас: " + quantity);
-
-                //Тут должны вызывать метод из класс DeliveryNewProduct
-                deliveryNewProduct(product,5);
+                deliveryNewProduct(product, 5);
                 System.out.println("Ваши запасы были пополнены: " + product + "Текущий запас: " + quantity);
             }
         }
     }
 }
+

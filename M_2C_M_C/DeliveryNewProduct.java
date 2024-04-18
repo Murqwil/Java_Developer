@@ -1,19 +1,17 @@
 package M_2C_M_C;
 
-import M_2C_M_C.InventoryService;
-
-import static M_2C_M_C.InventoryService.inventory;
+import java.util.Map;
 /*
 В случае если мы понимаем,что в InventoryService заканчивается продукция,пополняем запасы. ++
-
-связи:
-
 */
-
-
 public class DeliveryNewProduct {
-    public static void deliveryNewProduct(String item, double quantity) {
-        inventory.put(item, quantity);
+    public void deliveryNewProduct(Map<String, Double> inventory, String item, double quantity) {
+        if (inventory.containsKey(item)) {
+            double currentQuantity = inventory.get(item);
+            inventory.put(item, currentQuantity + quantity);
+        } else {
+            inventory.put(item, quantity);
+        }
     }
-
 }
+

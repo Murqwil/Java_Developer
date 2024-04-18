@@ -5,6 +5,35 @@ package M_2C_M_C;
 */
 
 
-public class OrderService {
+import java.util.ArrayList;
+import java.util.List;
 
+import java.util.ArrayList;
+import java.util.List;
+
+public class OrderService {
+    private List<CoffeeMenu> cart;
+
+    public OrderService() {
+        this.cart = new ArrayList<>();
+    }
+
+    public void addItemToCart(CoffeeMenu coffeeType) {
+        cart.add(coffeeType);
+    }
+
+    public double calculateTotal() {
+        double total = 0;
+        for (CoffeeMenu coffee : cart) {
+            total += coffee.getPrice();
+        }
+        return total;
+    }
+
+    public List<CoffeeMenu> getCart() {
+        return cart;
+    }
 }
+
+
+

@@ -7,26 +7,22 @@ import M_2C_M_C.Visitor;
 */
 
 public class PaymentService {
-     private boolean setPay = false;
-
-    public void setPay(boolean setPay) {
-        this.setPay = setPay;
-    }
+    private boolean isPay = false;
 
     public boolean isPay() {
-        return setPay;
+        return isPay;
     }
 
-    void visitorPay(Visitor visitor, double amount) {
+    public void processPayment(Visitor visitor, double amount) {
         if (visitor.getMoney() >= amount) {
-            // Вычитаем сумму из текущего баланса посетителя
             double newBalance = visitor.getMoney() - amount;
             visitor.setMoney(newBalance);
-            setPay(true); // Устанавливаем флаг оплаты в true
+            isPay = true; // Устанавливаем статус оплаты в true
             System.out.println("Оплата прошла успешно. Новый баланс: " + newBalance);
         } else {
             System.out.println("Недостаточно средств для оплаты.");
         }
     }
 }
+
 
