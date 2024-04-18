@@ -26,7 +26,7 @@ public class PaymentService {
             System.out.println("Оплата прошла успешно. Новый баланс: " + newBalance);
         } else {
             System.out.println("Недостаточно средств для оплаты.");
-        }cd
+        }
     }
 }
 
