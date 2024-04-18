@@ -1,5 +1,5 @@
 package M_2C_M_C;
-//Данный класс реализует поситителя
+//Данный класс реализует поситителя ++
 
 public class Visitor {
     private double money;
