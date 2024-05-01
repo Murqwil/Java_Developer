@@ -4,7 +4,7 @@ import java.util.Scanner;
 import M_2C_M_C.*;
 public class Main {
     public static void main(String[] args) {
-        Visitor visitor = new Visitor("Иван", 25.0);
+        Visitor visitor = new Visitor("Иван", 10.0);
         InventoryService inventoryService = new InventoryService();
         DeliveryNewProduct deliveryNewProduct = new DeliveryNewProduct();
         NotificationService notificationService = new NotificationService();
