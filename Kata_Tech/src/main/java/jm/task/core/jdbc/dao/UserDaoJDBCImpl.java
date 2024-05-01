@@ -24,16 +24,15 @@ public class UserDaoJDBCImpl implements UserDao {
             System.out.println("Таблица 'user' уже существует в базе данных 'kata'.");
         }
         // Создаем таблицу 'user' в БД 'kata'
-        int rowsAffected = Util.getStatement().executeUpdate("CREATE TABLE kata.user (" +
-                "id INT PRIMARY KEY AUTO_INCREMENT," +
-                "Name VARCHAR(50) NOT NULL," +
-                "LastName VARCHAR(50) NOT NULL," +
-                "Age INT NOT NULL" +
-                ")");
-        rowsAffected++;
-        if (rowsAffected > 0) {
+        try {
+            Util.getStatement().executeQuery("CREATE TABLE kata.user (" +
+                    "id INT PRIMARY KEY AUTO_INCREMENT," +
+                    "Name VARCHAR(50) NOT NULL," +
+                    "LastName VARCHAR(50) NOT NULL," +
+                    "Age INT NOT NULL" +
+                    ")");
             System.out.println("Таблица 'user' успешно создана в базе данных 'kata'.");
-        } else {
+        } catch (SQLException e) {
             System.out.println("Не удалось создать таблицу 'user' в базе данных 'kata'.");
         }
     }
@@ -51,13 +50,17 @@ public class UserDaoJDBCImpl implements UserDao {
 
     public void saveUser(String name, String lastName, byte age) throws SQLException {
         //реализовать метод!++
-        PreparedStatement preparedStatement = Util.getConnection().prepareStatement(
-                "INSERT INTO `kata`.`user` (`Name`, `LastName`, `Age`) VALUES (?, ?, ?)");
+        try (PreparedStatement preparedStatement = Util.getConnection()
+                             .prepareStatement(
+                                     "INSERT INTO `kata`.`user` (`Name`, `LastName`, `Age`) VALUES (?, ?, ?)")
+        ) {
 
-        preparedStatement.setString(1, name);
-        preparedStatement.setString(2, lastName);
-        preparedStatement.setByte(3, age);
-        preparedStatement.executeUpdate();
+            preparedStatement.setString(1, name);
+            preparedStatement.setString(2, lastName);
+            preparedStatement.setByte(3, age);
+            preparedStatement.executeUpdate();
+        }
+
 
         System.out.println("Пользователи успешно добавлены.");
     }
@@ -74,7 +77,7 @@ public class UserDaoJDBCImpl implements UserDao {
         List<User> users = new ArrayList<>();
         ResultSet resultSet = null;
         try {
-            resultSet = Util.getStatement().executeQuery("SELECT * FROM user;");
+            resultSet = Util.getStatement().executeQuery("SELECT * FROM kata.user;");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -86,12 +89,10 @@ public class UserDaoJDBCImpl implements UserDao {
                 byte age = resultSet.getByte("Age");
                 User user = new User(id, name, lastName, age);
                 users.add(user);
-            }
-        for (User user : users) {
-            System.out.println(user);
         }
+        users.forEach(System.out::println);
         return users;
-        }
+    }
 
 
 

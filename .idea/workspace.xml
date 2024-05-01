@@ -5,9 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79dd74f3-cca3-404f-8800-56e375954b0d" name="Changes" comment="Создал file LinkOfClasses">
-      <change beforePath="$PROJECT_DIR$/M_2C_M_C/Link" beforeDir="false" afterPath="$PROJECT_DIR$/M_2C_M_C/Link" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M_2C_M_C/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/M_2C_M_C/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M_2C_M_C/out/production/M_2C_M_C/M_2C_M_C/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/M_2C_M_C/out/production/M_2C_M_C/M_2C_M_C/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/src/main/java/jm/task/core/jdbc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/src/main/java/jm/task/core/jdbc/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/src/main/java/jm/task/core/jdbc/dao/UserDaoJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/src/main/java/jm/task/core/jdbc/dao/UserDaoJDBCImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/src/main/java/jm/task/core/jdbc/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/src/main/java/jm/task/core/jdbc/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/src/main/java/jm/task/core/jdbc/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/src/main/java/jm/task/core/jdbc/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/src/main/java/jm/task/core/jdbc/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/src/main/java/jm/task/core/jdbc/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/target/TaskJDBC-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/target/TaskJDBC-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/target/classes/jm/task/core/jdbc/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/target/classes/jm/task/core/jdbc/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/target/classes/jm/task/core/jdbc/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/target/classes/jm/task/core/jdbc/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/target/classes/jm/task/core/jdbc/dao/UserDaoHibernateImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/target/classes/jm/task/core/jdbc/dao/UserDaoHibernateImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/target/classes/jm/task/core/jdbc/dao/UserDaoJDBCImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/target/classes/jm/task/core/jdbc/dao/UserDaoJDBCImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/target/classes/jm/task/core/jdbc/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/target/classes/jm/task/core/jdbc/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/target/classes/jm/task/core/jdbc/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/target/classes/jm/task/core/jdbc/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/target/classes/jm/task/core/jdbc/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/target/classes/jm/task/core/jdbc/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/target/classes/jm/task/core/jdbc/util/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/target/classes/jm/task/core/jdbc/util/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kata_Tech/target/test-classes/UserServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Kata_Tech/target/test-classes/UserServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +59,13 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2f0Isl6nZWpcurRVb69xbMZOlNZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -52,15 +75,96 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "openjdk-21",
-    "last_opened_file_path": "C:/Users/Тимур/IdeaProjects/JavaDev",
+    "last_opened_file_path": "C:/Users/enfr1/OneDrive/Рабочий стол/Java_Developer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "configurable.group.build"
+    "settings.editor.selected.configurable": "configurable.group.build",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install" />
+      <command value="mvn clean install -Dmaven.test.skip=true" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jm.task.core.jdbc.Main" />
+      <module name="TaskJDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jm.task.core.jdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskJDBC" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.createUsersTable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskJDBC" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
+      <option name="METHOD_NAME" value="createUsersTable" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.dropUsersTable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskJDBC" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
+      <option name="METHOD_NAME" value="dropUsersTable" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.saveUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskJDBC" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
+      <option name="METHOD_NAME" value="saveUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.UserServiceTest.dropUsersTable" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest.createUsersTable" />
+        <item itemvalue="JUnit.UserServiceTest.saveUser" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -69,6 +173,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712931777274</updated>
+      <workItem from="1714586770115" duration="4562000" />
     </task>
     <task id="LOCAL-00001" summary="For test to see in GITHUB">
       <created>1712931884659</created>
@@ -122,6 +227,9 @@
     <option name="localTasksCounter" value="8" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -143,5 +251,26 @@
     <MESSAGE value="Создал класс NotificationService" />
     <MESSAGE value="Создал file LinkOfClasses" />
     <option name="LAST_COMMIT_MESSAGE" value="Создал file LinkOfClasses" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Kata_Tech/src/main/java/jm/task/core/jdbc/dao/UserDaoJDBCImpl.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Kata_Tech/src/test/java/UserServiceTest.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Kata_Tech/src/main/java/jm/task/core/jdbc/dao/UserDaoJDBCImpl.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
