@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="79dd74f3-cca3-404f-8800-56e375954b0d" name="Changes" comment="Создал file LinkOfClasses">
+      <change beforePath="$PROJECT_DIR$/M_2C_M_C/Link" beforeDir="false" afterPath="$PROJECT_DIR$/M_2C_M_C/Link" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M_2C_M_C/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/M_2C_M_C/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M_2C_M_C/out/production/M_2C_M_C/M_2C_M_C/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/M_2C_M_C/out/production/M_2C_M_C/M_2C_M_C/Main.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Build_Main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d357599d-de90-4058-8919-ec8b0e9738ce" />
+        <option name="url" value="https://github.com/Murqwil/Java_Developer.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectId" id="2f0Isl6nZWpcurRVb69xbMZOlNZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-21",
+    "last_opened_file_path": "C:/Users/Тимур/IdeaProjects/JavaDev",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "configurable.group.build"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="79dd74f3-cca3-404f-8800-56e375954b0d" name="Changes" comment="" />
+      <created>1712931777274</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712931777274</updated>
+    </task>
+    <task id="LOCAL-00001" summary="For test to see in GITHUB">
+      <created>1712931884659</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712931884659</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Создал проект для кофе">
+      <created>1713105086374</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105086374</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Создал класс PaymentService">
+      <created>1713105210522</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105210522</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Создал класс InventoryService">
+      <created>1713105293411</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105293411</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Создал класс PreparationService">
+      <created>1713105415075</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105415075</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Создал класс NotificationService">
+      <created>1713105456729</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105456729</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Создал file LinkOfClasses">
+      <created>1713106014457</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713106014457</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="For test to see in GITHUB" />
+    <MESSAGE value="Что то поменялось!" />
+    <MESSAGE value="Создал проект для кофе" />
+    <MESSAGE value="Создал класс PaymentService" />
+    <MESSAGE value="Создал класс InventoryService" />
+    <MESSAGE value="Создал класс PreparationService" />
+    <MESSAGE value="Создал класс NotificationService" />
+    <MESSAGE value="Создал file LinkOfClasses" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создал file LinkOfClasses" />
+  </component>
+</project>
