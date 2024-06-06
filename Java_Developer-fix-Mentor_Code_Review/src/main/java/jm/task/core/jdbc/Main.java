@@ -9,7 +9,7 @@ import org.hibernate.Transaction;
 import java.sql.SQLException;
 
 
-public class Main {
+public class  Main {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 //Создали объект класса чтобы могли тянуть методы с него
         UserService userService = new UserServiceImpl();
@@ -19,10 +19,9 @@ public class Main {
         try (Session session = Util.getSessionFactory().openSession()) {
             //CRUD методы
             Transaction transaction = session.beginTransaction();
-
+        }
 //Данный метод должен будет создать Таблицу Базы данных
             userService.createUsersTable();
-        }
 
 //Данный метод должен будет создать 4 юзера и занести их в нашу таблицу
             userService.saveUser("Name1", "LastName1", (byte) 20);

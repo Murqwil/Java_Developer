@@ -23,18 +23,23 @@ public class Util {
             throw new RuntimeException("Error connecting to the database", e);
         }
     }
-
-    static {
-        try {
-            Configuration configuration = new Configuration();
-            configuration.configure();
-            sessionFactory = configuration.buildSessionFactory();
-        } catch (Exception e) {
-            throw new ExceptionInInitializerError(e);
+    public static SessionFactory getSessionFactory() {
+        if (sessionFactory == null) {
+            try {
+                Configuration configuration = new Configuration();
+                configuration.configure(); // Предполагается, что файл hibernate.cfg.xml находится в classpath
+                sessionFactory = configuration.buildSessionFactory();
+            } catch (Exception e) {
+                throw new ExceptionInInitializerError("Initial SessionFactory creation failed: " + e);
+            }
         }
+        return sessionFactory;
     }
 
-    public static SessionFactory getSessionFactory() {
-        return sessionFactory;
+    // Закрытие SessionFactory
+    public static void shutdown() {
+        if (sessionFactory != null) {
+            sessionFactory.close();
+        }
     }
 }

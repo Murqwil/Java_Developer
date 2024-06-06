@@ -5,11 +5,12 @@
 <hibernate-configuration>
     <session-factory>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/mysql</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/kata</property>
         <property name="connection.username">root</property>
         <property name="connection.password">root</property>
         <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
         <property name="show_sql">false</property>
         <property name="hibernate.logging.level.org.hibernate">ERROR</property>
+        <mapping class="jm.task.core.jdbc.model.User"/>
     </session-factory>
 </hibernate-configuration>

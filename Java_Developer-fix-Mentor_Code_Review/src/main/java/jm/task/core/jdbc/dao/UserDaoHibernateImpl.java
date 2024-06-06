@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.NativeQuery;
+import org.hibernate.query.Query;
 
 import java.text.MessageFormat;
 import java.util.List;
@@ -57,6 +58,7 @@ public class UserDaoHibernateImpl implements UserDao {
             User user = new User(name, lastName, age);
             session.save(user);
             transaction.commit();
+            transaction.rollback();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -70,8 +72,8 @@ public class UserDaoHibernateImpl implements UserDao {
             User user = session.get(User.class, id);
             session.delete(user);
             System.out.println(MessageFormat.format("Пользователь с id = {0} удален!", id));
-
             transaction.commit();
+            transaction.rollback();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -80,8 +82,8 @@ public class UserDaoHibernateImpl implements UserDao {
     @Override
     public List<User> getAllUsers() {
         try (Session session = sessionFactory.openSession()) {
-            NativeQuery<User> nativeQuery = session.createNativeQuery("SELECT * FROM kata.users;", User.class);
-            List<User> resultList = nativeQuery.getResultList();
+            Query<User> query = session.createQuery("FROM users", User.class);
+            List<User> resultList = query.getResultList();
             System.out.println("Найденные пользователи: ");
             resultList.forEach(it -> System.out.println(MessageFormat.format("ID: {0} | Name: {1} | LastName: {2} | Age: {3}", it.getId(), it.getName(), it.getLastName(), it.getAge())));
             return resultList;
@@ -96,13 +98,15 @@ public class UserDaoHibernateImpl implements UserDao {
     public void cleanUsersTable() {
         try (Session session = sessionFactory.openSession()) {
             Transaction transaction = session.beginTransaction();
-            NativeQuery<User> nativeQuery = session.createNativeQuery("SELECT * FROM kata.users;", User.class);
-            List<User> resultList = nativeQuery.getResultList();
+            Query<User> query = session.createQuery("FROM users", User.class);
+            List<User> resultList = query.getResultList();
             resultList.forEach(session::delete);
             System.out.println("Таблицы с пользователями очищена!");
             transaction.commit();
+            transaction.rollback();
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("Произошла ошибка при очистке пользователей ");
         }
     }
 }
