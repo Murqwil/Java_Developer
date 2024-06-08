@@ -1,5 +1,6 @@
 package jm.task.core.jdbc.util;
 
+import jm.task.core.jdbc.model.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -27,7 +28,14 @@ public class Util {
         if (sessionFactory == null) {
             try {
                 Configuration configuration = new Configuration();
-                configuration.configure(); // Предполагается, что файл hibernate.cfg.xml находится в classpath
+                configuration.setProperty("hibernate.connection.driver_class","com.mysql.cj.jdbc.Driver");
+                configuration.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/kata");
+                configuration.setProperty("hibernate.connection.username","root");
+                configuration.setProperty("hibernate.connection.password","root");
+                configuration.setProperty("hibernate.dialect","org.hibernate.dialect.MySQL8Dialect");
+                configuration.setProperty("hibernate.show_sql","false");
+                configuration.setProperty("hibernate.logging.level.org.hibernate","ERROR");
+                configuration.addAnnotatedClass(User.class);
                 sessionFactory = configuration.buildSessionFactory();
             } catch (Exception e) {
                 throw new ExceptionInInitializerError("Initial SessionFactory creation failed: " + e);

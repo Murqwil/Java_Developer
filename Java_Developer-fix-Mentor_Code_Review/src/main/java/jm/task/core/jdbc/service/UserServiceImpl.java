@@ -14,32 +14,63 @@ public class UserServiceImpl implements UserService {
     private final UserDao userDao = new UserDaoHibernateImpl();
 
     @Override
-    public void createUsersTable() throws SQLException {
-        userDao.createUsersTable();
+    public void createUsersTable() {
+        try {
+            userDao.createUsersTable();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.err.println("Ошибка создания таблицы на уровне сервиса.");
+        }
     }
 
     @Override
-    public void dropUsersTable() throws SQLException {
-        userDao.dropUsersTable();
+    public void dropUsersTable() {
+        try {
+            userDao.dropUsersTable();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.err.println("Ошибка удаления таблицы на уровне сервиса.");
+        }
     }
 
     @Override
-    public void saveUser(String name, String lastName, byte age) throws SQLException {
-        userDao.saveUser(name, lastName, age);
+    public void saveUser(String name, String lastName, byte age) {
+        try {
+            userDao.saveUser(name, lastName, age);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.err.println("Ошибка сохранения пользователей на уровне сервиса.");
+        }
     }
 
     @Override
-    public void removeUserById(long id) throws SQLException {
-        userDao.removeUserById(id);
+    public void removeUserById(long id) {
+        try {
+            userDao.removeUserById(id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.err.println("Ошибка удаления пользователя по ID на уровне сервиса.");
+        }
     }
 
     @Override
-    public List<User> getAllUsers() throws SQLException {
-        return userDao.getAllUsers();
+    public List<User> getAllUsers() {
+        try {
+            return userDao.getAllUsers();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.err.println("Ошибка вывода пользователей на уровне сервиса.");
+        }
+        return null;
     }
 
     @Override
-    public void cleanUsersTable() throws SQLException {
-        userDao.cleanUsersTable();
+    public void cleanUsersTable() {
+        try {
+            userDao.cleanUsersTable();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.err.println("Ошибка очитски всезх пользователей на уровне сервиса.");
+        }
     }
 }
