@@ -13,6 +13,9 @@ import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
     private final SessionFactory sessionFactory = Util.getSessionFactory();
+//    Убрать ролбэки с DDL операций(DDL операции явлюятся createUserTable и deleteUserTable,с них убрал rollback)
+
+//    Почему только на saveUser ролбэк? Остальные DML операции атомарны?(Добавил всем ролбэк,кроме getAllUsers)
 
     public UserDaoHibernateImpl() {
 
@@ -21,9 +24,8 @@ public class UserDaoHibernateImpl implements UserDao {
 
     @Override
     public void createUsersTable() {
-        Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
-            transaction = session.beginTransaction();
+            Transaction transaction = session.beginTransaction();
             session.createSQLQuery("CREATE TABLE IF NOT EXISTS kata.users " +
                     "(id BIGINT NOT NULL AUTO_INCREMENT, " +
                     "name VARCHAR(255), " +
@@ -33,7 +35,6 @@ public class UserDaoHibernateImpl implements UserDao {
             transaction.commit();
             System.out.println("Таблица `users` успешно создана!");
         } catch (Exception e) {
-            if (transaction != null) transaction.rollback();
             System.out.println("Не удалось создать таблицу `users` в базе данных `kata`" + e);
             e.printStackTrace();
         }
@@ -41,14 +42,12 @@ public class UserDaoHibernateImpl implements UserDao {
 
     @Override
     public void dropUsersTable() {
-        Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
-            transaction = session.beginTransaction();
+            Transaction transaction = session.beginTransaction();
             session.createSQLQuery("DROP TABLE IF EXISTS kata.users").executeUpdate();
             System.out.println("Удалили таблицу `users`");
             transaction.commit();
         } catch (Exception e) {
-            if (transaction != null) transaction.rollback();
             System.out.println("Не удалось удалить таблицу `users` в базе данных `kata`" + e);
             e.printStackTrace();
         }
@@ -104,14 +103,16 @@ public class UserDaoHibernateImpl implements UserDao {
 
     @Override
     public void cleanUsersTable() {
+        Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
-            Transaction transaction = session.beginTransaction();
+            transaction = session.beginTransaction();
             Query<User> query = session.createQuery("FROM users", User.class);
             List<User> resultList = query.getResultList();
             resultList.forEach(session::delete);
             System.out.println("Таблицы с пользователями очищена!");
             transaction.commit();
         } catch (Exception e) {
+            if (transaction != null) transaction.rollback();
             e.printStackTrace();
             System.out.println("Произошла ошибка при очистке пользователей ");
         }
