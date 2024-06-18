@@ -10,36 +10,35 @@ import java.util.List;
 
 public class UserServiceImpl implements UserService {
 
-    //    UserServiceImpl  - здесь трай кечи не нужны(Убрал try catch,без обработки ошибки,код не компилиться)
     private final UserDao userDao = new UserDaoHibernateImpl();
 
     @Override
-    public void createUsersTable() throws SQLException {
+    public void createUsersTable() {
             userDao.createUsersTable();
     }
 
     @Override
-    public void dropUsersTable() throws SQLException {
+    public void dropUsersTable() {
             userDao.dropUsersTable();
     }
 
     @Override
-    public void saveUser(String name, String lastName, byte age) throws SQLException {
+    public void saveUser(String name, String lastName, byte age) {
             userDao.saveUser(name, lastName, age);
     }
 
     @Override
-    public void removeUserById(long id) throws SQLException {
+    public void removeUserById(long id) {
             userDao.removeUserById(id);
     }
 
     @Override
-    public List<User> getAllUsers() throws SQLException {
+    public List<User> getAllUsers() {
             return userDao.getAllUsers();
     }
 
     @Override
-    public void cleanUsersTable() throws SQLException {
+    public void cleanUsersTable() {
             userDao.cleanUsersTable();
     }
 }

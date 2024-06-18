@@ -13,9 +13,6 @@ import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
     private final SessionFactory sessionFactory = Util.getSessionFactory();
-//    Убрать ролбэки с DDL операций(DDL операции явлюятся createUserTable и deleteUserTable,с них убрал rollback)
-
-//    Почему только на saveUser ролбэк? Остальные DML операции атомарны?(Добавил всем ролбэк,кроме getAllUsers)
 
     public UserDaoHibernateImpl() {
 
@@ -103,18 +100,11 @@ public class UserDaoHibernateImpl implements UserDao {
 
     @Override
     public void cleanUsersTable() {
-        Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
-            transaction = session.beginTransaction();
-            Query<User> query = session.createQuery("FROM users", User.class);
-            List<User> resultList = query.getResultList();
-            resultList.forEach(session::delete);
-            System.out.println("Таблицы с пользователями очищена!");
-            transaction.commit();
+            Query query = session.createQuery("DELETE FROM users");
         } catch (Exception e) {
-            if (transaction != null) transaction.rollback();
             e.printStackTrace();
-            System.out.println("Произошла ошибка при очистке пользователей ");
+            System.out.println("Произошла ошибка при попытке очистить таблицу");
         }
     }
 }
